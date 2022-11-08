@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+}
+body .page-container {
+  display: flex;
+  height: 100vh;
+}
+body .page-container .side-control-bar {
+  display: flex;
+  width: 15%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(21, 24, 67);
+}
+body .page-container .side-control-bar .header-wrapper-1 {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+body .page-container .side-control-bar .control-bar-divider {
+  height: 1.5px;
+  width: 100%;
+  background-color: rgb(213, 211, 213);
+}
+body .page-container .side-control-bar .class-roster-container {
+  display: flex;
+  flex-direction: column;
+}
+body .page-container .side-control-bar .class-roster-container .name-student-container {
+  display: flex;
+  flex-direction: column;
+}
+body .page-container .side-control-bar .class-roster-container .name-student-container .student h5 {
+  color: white;
+}
+body .page-container .side-control-bar .class-roster-container .name-student-container .student .red-button {
+  color: white;
+  background-color: red;
+}
+body .page-container .side-control-bar .class-roster-container .name-student-container .student .green-button {
+  color: white;
+  background-color: limegreen;
+}
+body .page-container .right-page-display {
+  display: flex;
+  width: 85%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .page-container .right-page-display .header-wrapper-2 {
+  display: flex;
+  color: black;
+}
+body .page-container .right-page-display .header-wrapper-2 h1 {
+  font-size: 5rem;
+}
+body .page-container .right-page-display .randomizer-button button {
+  width: 450px;
+  height: 60px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(21, 24, 67);
+  font-family: Arial, Helvetica, sans-serif;
+  border-color: transparent;
+}/*# sourceMappingURL=index.css.map */

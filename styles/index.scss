@@ -1,0 +1,73 @@
+body{
+    margin:0;
+    .page-container{
+        display: flex;
+        height: 100vh;
+        .side-control-bar{
+            display:flex;
+            width: 15%;
+            height: 100%;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(21,24,67);
+            .header-wrapper-1{
+                display:flex;
+                justify-content: center;
+                color:white;
+            }
+         .control-bar-divider{
+                height: 1.5px;
+                width: 100%;
+                background-color:rgb(213,211,213);
+            }
+            .class-roster-container{
+                display:flex;
+                flex-direction: column;
+                .name-student-container{
+                    display: flex;
+                    flex-direction: column;
+                    .student{
+                        h5{
+                            color:white;
+                        }
+                        .red-button{
+                            color:white;
+                            background-color: red;
+                        }
+                        .green-button{
+                            color:white;
+                            background-color: limegreen;
+                        }
+                    }
+                }
+            }
+        }
+        .right-page-display{
+            display: flex;
+            
+            width: 85%;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .header-wrapper-2{
+                display: flex;
+                color: black;
+                h1{
+                    font-size: 5rem;
+                }
+            }
+            .randomizer-button{
+                button{
+                    width: 450px;
+                    height: 60px;
+                    border-radius: 5px;
+                    color:white;
+                    background-color:rgb(21,24,67);
+                    font-family:Arial, Helvetica, sans-serif;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+}
