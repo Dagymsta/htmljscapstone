@@ -27,18 +27,14 @@ body .page-container .side-control-bar .class-roster-container {
   display: flex;
   flex-direction: column;
 }
-body .page-container .side-control-bar .class-roster-container .name-student-container {
-  display: flex;
-  flex-direction: column;
-}
-body .page-container .side-control-bar .class-roster-container .name-student-container .student h5 {
+body .page-container .side-control-bar .class-roster-container .student {
   color: white;
 }
-body .page-container .side-control-bar .class-roster-container .name-student-container .student .red-button {
+body .page-container .side-control-bar .class-roster-container .student .red-button {
   color: white;
   background-color: red;
 }
-body .page-container .side-control-bar .class-roster-container .name-student-container .student .green-button {
+body .page-container .side-control-bar .class-roster-container .student .green-button {
   color: white;
   background-color: limegreen;
 }

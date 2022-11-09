@@ -15,31 +15,25 @@ body{
                 justify-content: center;
                 color:white;
             }
-         .control-bar-divider{
+        .control-bar-divider{
                 height: 1.5px;
                 width: 100%;
                 background-color:rgb(213,211,213);
             }
-            .class-roster-container{
+        .class-roster-container{
                 display:flex;
-                flex-direction: column;
-                .name-student-container{
-                    display: flex;
-                    flex-direction: column;
-                    .student{
-                        h5{
-                            color:white;
-                        }
-                        .red-button{
-                            color:white;
-                            background-color: red;
-                        }
-                        .green-button{
-                            color:white;
-                            background-color: limegreen;
-                        }
+                flex-direction: column; 
+                .student{
+                    color: white;  
+                    .red-button{
+                        color: white;
+                        background-color: red;
                     }
-                }
+                    .green-button{
+                        color: white;
+                        background-color: limegreen;
+                    }
+                }  
             }
         }
         .right-page-display{
