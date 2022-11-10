@@ -37,13 +37,13 @@ body{
             }
         }
         .right-page-display{
-            display: flex;
-            
+            display: flex;            
             width: 85%;
             height: 100%;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
             .header-wrapper-2{
                 display: flex;
                 color: black;
@@ -51,16 +51,15 @@ body{
                     font-size: 5rem;
                 }
             }
-            .randomizer-button{
-                button{
-                    width: 450px;
-                    height: 60px;
-                    border-radius: 5px;
-                    color:white;
-                    background-color:rgb(21,24,67);
-                    font-family:Arial, Helvetica, sans-serif;
-                    border-color: transparent;
-                }
+            
+            .random-student-btn{
+                width: 450px;
+                height: 60px;
+                border-radius: 5px;
+                color:white;
+                background-color:rgb(21,24,67);
+                font-family:Arial, Helvetica, sans-serif;
+                border-color: transparent;           
             }
         }
     }
