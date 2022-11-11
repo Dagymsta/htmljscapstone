@@ -95,14 +95,31 @@ function createStudentPicker() {
   rightContainerDiv.appendChild(randomStudentBtn);
   randomStudentBtn.addEventListener("click", (e) => pickerButton());
 }
+
+const headerWrapper = document.getElementsByClassName("header-wrapper-2");
+const headerWrapperDiv = headerWrapper.item(0);
+
+
+function luckyDay(){
+  const h1=document.createElement("h1")
+  h1.setAttribute("id","lucky-header")
+  h1.innerText="It's your lucky day:"
+  headerWrapperDiv.appendChild(h1)
+}
+luckyDay()
+
 createStudentPicker();
 
 function pickerButton() {
   min = 0;
   max = startingArray.length - 1;
   const y = Math.floor(Math.random() * (max - min + 1) + min);
-  console.log(startingArray.splice(y, 1));
+  const luckyDog=startingArray.splice(y, 1);
   console.log(startingArray);
+  const h1=document.getElementById("lucky-header")
+  h1.innerText=luckyDog
+  headerWrapperDiv.appendChild(h1)
 }
+
 
 toStudentDiv()
