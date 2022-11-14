@@ -1,19 +1,4 @@
-/* 
-TODO:
-render a list of students to the browser
- - fetch / use mock students 
- - loop data
-    - create a container div
-      - add attributes (class, etc)
-    - create text from formatted name
-    - create text for weight
-    - create plus / minus buttons
-      - add event listeners to buttons
-    - stitch all elements
-    - append container div to sidebar
-random selection
-refactor
-*/
+
 const classRosterContainer = document.getElementsByClassName("class-roster-container");
 const classRosterContainerDiv = classRosterContainer.item(0)
 
@@ -42,7 +27,8 @@ function toStudentDiv(){
         studentName.innerText=user.first_name;
         const weight = document.createElement("span");
         weight.classList.add("weight");
-        weight.innerText = 0;
+        weight.setAttribute("id",`weight-${user._id}`)
+        weight.innerText = 1;
         const newLine=document.createElement("br")
         
         const redButton= document.createElement("button")
@@ -72,9 +58,11 @@ function handleAddWeight(plusWeight, crement) {
   const parentDiv = plusWeight.parentElement;
   const weight = parentDiv.children[0];
   const currentWeight = Number(weight.textContent);
-  console.log(currentWeight + crement);
-  weight.innerHTML = currentWeight + crement;
-}
+    if (currentWeight > 0 || crement == 1) {
+      console.log(currentWeight + crement);
+      weight.innerHTML = currentWeight + crement;
+    }
+  }
 
 function addStudent(fn) {
   startingArray.push(fn);
@@ -84,7 +72,10 @@ function addStudent(fn) {
 function minusStudent(fn) {
   const indexOfFn = (element) => element === fn;
   const q = startingArray.findIndex(indexOfFn);
-  startingArray.splice(q, 1);
+  if (startingArray.includes(fn)) {
+    startingArray.splice(q, 1);
+  }
+  console.log(fn);
   console.log(startingArray);
 }
 
@@ -111,6 +102,19 @@ luckyDay()
 createStudentPicker();
 
 function pickerButton() {
+
+  if(startingArray.length == 0){
+    for(user of studentInfo.users){
+      const id= user._id
+      const first_name= user.first_name
+      let currentWeight= document.getElementById(`weight-${id}`)
+      console.log(currentWeight)
+      let i = Number(currentWeight.innerText)
+      for(i>0; i--;){
+        startingArray.push(first_name)
+      }
+    }
+  }
   min = 0;
   max = startingArray.length - 1;
   const y = Math.floor(Math.random() * (max - min + 1) + min);
@@ -123,3 +127,5 @@ function pickerButton() {
 
 
 toStudentDiv()
+
+
